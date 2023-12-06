@@ -14,7 +14,7 @@ const findLastStudentId = async () => {
     .sort({
       createdAt: -1,
     })
-    .lean();
+    .lean(); // lean makes the query faster
 
   return lastStudent?.id ? lastStudent.id : undefined;
 };
