@@ -3,7 +3,7 @@ import catchAsync from '../../utils/catchAsync';
 import sendResponse from '../../utils/sendResponse';
 import { AcademicDepartmentServices } from './academicDepartment.service';
 
-const createAcademicDepartmemt = catchAsync(async (req, res) => {
+const createAcademicDepartment = catchAsync(async (req, res) => {
   const result =
     await AcademicDepartmentServices.createAcademicDepartmentIntoDB(req.body);
 
@@ -59,7 +59,7 @@ const updateAcademicDeartment = catchAsync(async (req, res) => {
 });
 
 export const AcademicDepartmentControllers = {
-  createAcademicDepartmemt,
+  createAcademicDepartmemt: createAcademicDepartment,
   getAllAcademicDepartments,
   getSingleAcademicDepartment,
   updateAcademicDeartment,
