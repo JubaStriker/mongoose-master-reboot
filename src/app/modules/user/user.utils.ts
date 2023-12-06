@@ -12,7 +12,7 @@ const findLastStudentId = async () => {
     },
   )
     .sort({
-      createdAt: -1,
+      createdAt: -1, // querying in descending order to get the latest id
     })
     .lean(); // lean makes the query faster
 
