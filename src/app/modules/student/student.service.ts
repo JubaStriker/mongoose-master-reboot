@@ -189,7 +189,7 @@ const deleteStudentFromDB = async (id: string) => {
 
   try {
     session.startTransaction();
-
+    // No array needed for findByIdAndUpdate
     const deletedStudent = await Student.findByIdAndUpdate(
       id,
       { isDeleted: true },

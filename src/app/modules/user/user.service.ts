@@ -46,6 +46,7 @@ const createStudentIntoDB = async (password: string, payload: TStudent) => {
     userData.id = await generateStudentId(admissionSemester);
 
     // create a user (transaction-1)
+    // in transaction data has to be passed as an array
     const newUser = await User.create([userData], { session }); // array
 
     //create a student
