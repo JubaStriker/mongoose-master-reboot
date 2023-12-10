@@ -152,10 +152,7 @@ const updateStudentIntoDB = async (id: string, payload: Partial<TStudent>) => {
     guardain: {
       fatherOccupation:"Teacher"
     }
-
     guardian.fatherOccupation = Teacher
-
-  
   */
 
   if (name && Object.keys(name).length) {
